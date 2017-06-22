@@ -20,9 +20,7 @@ public class Main {
             Driver driver = new FabricMySQLDriver();
             DriverManager.registerDriver(driver);
             Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/test?useSSL=false\",\"root\",\"root");
-            if(!connection.isClosed()){
-                System.out.println("Connection completed!");
-            }
+            if(!connection.isClosed()) System.out.println("Connection completed!");
 
         } catch (SQLException e) {
             e.printStackTrace();
